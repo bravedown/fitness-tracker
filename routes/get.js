@@ -1,4 +1,5 @@
 const path = require('path');
+const db = require('../models');
 module.exports = router => {
     // ---- HTML  ----
     router.get('/exercise', (req, res) => {
@@ -11,6 +12,9 @@ module.exports = router => {
     // ---- /HTML ----
 
     // ---- API  ----
-    
+    router.get('/api/workouts', async (req, res) => {
+        const workouts = await db.Workout.find();
+        res.json(workouts);
+    })
     // ---- /API ----
 }

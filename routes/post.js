@@ -1,6 +1,6 @@
 module.exports = router => {
-    // router.get('/', (req, res) => {
-    //     res.send('./')
-    // });
+    router.post('/api/workouts', (req, res) => {
+        console.log(req.body);
+    });
 
 }
