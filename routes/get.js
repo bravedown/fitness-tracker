@@ -15,6 +15,11 @@ module.exports = router => {
     router.get('/api/workouts', async (req, res) => {
         const workouts = await db.Workout.find();
         res.json(workouts);
-    })
+    });
+
+    router.get('/api/workouts/range', async (req, res) => {
+        const workouts = await db.Workout.find();
+        res.json(workouts);
+    });
     // ---- /API ----
 }
